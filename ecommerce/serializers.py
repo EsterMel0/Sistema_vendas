@@ -14,13 +14,13 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
         exclude = ''
 
 
-class SaleSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Sale
-        exclude = ''
-
-
 class CategorySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Category
+        exclude = ''
+
+
+class SaleSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Sale
         exclude = ''

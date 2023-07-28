@@ -1,5 +1,5 @@
 # flake8: noqa
-from django.shortcuts import render
+# from django.shortcuts import render
 from rest_framework import viewsets
 from .models import UserAccount, Product, Sale, Category
 from .serializers import UserSerializer, ProductSerializer, SaleSerializer, CategorySerializer

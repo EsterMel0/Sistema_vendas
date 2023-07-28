@@ -32,5 +32,8 @@ class Product(models.Model):
 
 class Sale(models.Model):
     buyer = models.ForeignKey(UserAccount, on_delete=models.CASCADE)
-    date = models.DateField()
-    products_buyed = models.ForeignKey(Product, on_delete=models.CASCADE)
+    date = models.DateField(null=False)
+    products_buyed = models.ManyToManyField(Product)
+
+    def __str__(self):
+        return f'{self.buyer}'
